@@ -24,7 +24,7 @@ public class HomeWork5 {
         persArray[4] = new Person("Biber Jastin", "Team Lead", "loveYouBaby@i.ua", "+38(096)903-55-84",
                 3500, 45);
 
-        for (int i = 1; i < persArray.length; i++) {
+        for (int i = 0; i < persArray.length; i++) {
             if (persArray[i].getAge() > 40) {
                 System.out.println("List of staff: " + " " + persArray[i].getFullInfo());
             }
