@@ -16,6 +16,10 @@ public class HomeWork2 {
 
         fiendMaxAndMinCount(); // 5)
 
+        System.out.println();
+        int [] arr = new int[] {2, 4, 5, 1, 8, 7, 10, 88}; // 7)
+        System.out.println("7 - задание: \n" + Arrays.toString(shiftArr(arr,2)));
+
     }
 
 // 1)Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ].
@@ -89,5 +93,22 @@ public class HomeWork2 {
                 indMax + " со значением  = " + max);
         System.out.println("Минимальный элемент находится в массиве под индексом " +
                 indMin + " со значением  = " + min);
+    }
+
+    /*7. **** Написать метод, которому на вход подается одномерный массив и число n (может быть
+    положительным, или отрицательным), при этом метод должен сместить все элементы
+    массива на n позиций. Для усложнения задачи нельзя пользоваться вспомогательными массивами.*/
+
+
+    public static int[] shiftArr(int[] arr, int n) {
+        int k = n % arr.length + arr.length;
+        for(int i = 0; i < k; i++){
+            int tmp = arr[arr.length - 1];
+            for(int j = arr.length - 1; j > 0; j--){
+                arr[j] = arr[j - 1];
+            }
+            arr[0] = tmp;
+        }
+        return arr;
     }
 }
