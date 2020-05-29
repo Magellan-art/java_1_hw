@@ -1,12 +1,12 @@
 package HomeWork5;
 
 public class Person {
-    String fullName;
-    String position;
-    String email;
-    String phoneNumber;
-    int salary;
-    int age;
+    private String fullName;
+    private String position;
+    private String email;
+    private String phoneNumber;
+    private int salary;
+    private int age;
 
 
     public Person(String fullName, String position, String email, String phoneNumber, int salary, int age) {
@@ -24,7 +24,7 @@ public class Person {
 
     public String getFullInfo() {
         return " Full name: " + fullName + " | Position: " + position
-                + " | Phone number : " + phoneNumber + " | Salary: " + salary + " | Age: "
+                + " | Email : " + email + " | Phone number : " + phoneNumber + " | Salary: " + salary + " | Age: "
                 + age;
     }
 }
